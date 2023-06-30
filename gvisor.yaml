@@ -8,18 +8,5 @@ spec:
   - name: gvisor
     image: ubuntu:latest
     command: [ "bin/bash", "-c", "--"]
-    args: ["while true; do sleep 30; done;"]
-    volumeMounts:
-    - name: tracingpath
-      mountPath: /data/shared
-    - name : programpath
-      mountPath: /program
-  volumes:
-  - name : tracingpath
-    hostPath:
-      path: /sys/kernel/debug/tracing
-      type: Directory
-  - name : programpath
-    hostPath:
-      path: /home/workernode2/container_volume2
-      type : Directory
+    args: 
+      - apt-get update; apt upgrade; apt install -y git ssh wget net-tools vim
