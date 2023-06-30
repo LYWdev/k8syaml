@@ -9,3 +9,7 @@ spec:
     image: ubuntu:latest
     command: [ "bin/bash", "-c", "--"]
     args: ["while true; do sleep 30; done;"]
+  dnsPolicy: None
+  dnsConfig:
+    nameservers:
+      - 155.230.10.2
