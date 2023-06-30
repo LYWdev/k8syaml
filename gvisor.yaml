@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: gvisor3
+  name: gvisor
 spec:
   runtimeClassName: gvisorclass
   containers:
-  - name: gvisor3
+  - name: gvisor
     image: ubuntu:latest
     command: [ "bin/bash", "-c", "--"]
     args: ["while true; do sleep 30; done;"]
