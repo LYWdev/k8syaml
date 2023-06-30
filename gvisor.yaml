@@ -8,5 +8,4 @@ spec:
   - name: gvisor
     image: ubuntu:latest
     command: [ "bin/bash", "-c", "--"]
-    args: 
-      - apt-get update; apt upgrade; apt install -y git ssh wget net-tools vim
+    args: ["while true; do sleep 30; done;"]
